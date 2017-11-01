@@ -1,5 +1,7 @@
 ﻿using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace KidsPictures
 {
     public partial class App : Application
@@ -7,8 +9,7 @@ namespace KidsPictures
         public App()
         {
             InitializeComponent();
-
-            MainPage = new KidsPicturesPage();
+            MainPage = new KidsPictures.KidsPicturesPage();
         }
 
         protected override void OnStart()

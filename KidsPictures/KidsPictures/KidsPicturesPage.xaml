@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:KidsPictures" x:Class="KidsPictures.KidsPicturesPage">
-    <StackLayout Orientation="Vertical">
-        <Label x:Name="_label" Text="Welcome to Xamarin Forms!" VerticalOptions="Center" HorizontalOptions="Center" />
-        <Button Clicked="Handle_Clicked" Text="Click me"/>
-    </StackLayout>
-</ContentPage>
+<CarouselPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:local="clr-namespace:KidsPictures" 
+    x:Class="KidsPictures.KidsPicturesPage">
+       <CarouselPage.ItemTemplate>
+        <DataTemplate>
+            <ContentPage BackgroundColor = "Silver">
+                <ContentPage.Padding>
+                    <OnPlatform x:TypeArguments="Thickness">
+                        <On Platform="iOS, Android" Value="0,10,0,0" />
+                    </OnPlatform>
+                </ContentPage.Padding>
+                <StackLayout>
+                    <Label Text="{Binding NameItem}" FontSize="Medium" HorizontalOptions="CenterAndExpand" FontAttributes ="Bold" TextColor ="Fuchsia"/>
+                    <Image Source="{Binding ImageItem}" HorizontalOptions="Center" VerticalOptions= "Center"/>
+                </StackLayout>
+            </ContentPage>
+        </DataTemplate>
+    </CarouselPage.ItemTemplate>
+</CarouselPage>
