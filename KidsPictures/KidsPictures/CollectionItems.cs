@@ -17,54 +17,54 @@ namespace KidsPictures
             All = new ObservableCollection<CollectionItems> {
                 new CollectionItems {
                     NameItem = "СОВА",
-                    ImageItem = new Image{Source = "Animal1.jpg"}
+                    ImageItem = new Image{Source = "owl.jpg"}
                 },
                 new CollectionItems {
                     NameItem = "ОЛЕНЬ",
-                    ImageItem = new Image{Source = "Animal2.jpg"}
+                    ImageItem = new Image{Source = "deer.jpg"}
                 },
                 new CollectionItems {
                     NameItem = "СУРОК",
-                    ImageItem = new Image{Source = "Animal3.jpg"}
+                    ImageItem = new Image{Source = "marmot.jpg"}
                 },
                 new CollectionItems {
                     NameItem = "СОБАКА",
-                    ImageItem = new Image{Source = "Animal4.jpg"}
+                    ImageItem = new Image{Source = "dog.jpg"}
                 },
                 new CollectionItems
                 {
                     NameItem = "КРОЛЬ",
-                    ImageItem = new Image{Source = "Animal5.jpg"}
+                    ImageItem = new Image{Source = "rabbit.jpg"}
                 },
                 new CollectionItems
                 {
                     NameItem = "ВОЛК",
-                    ImageItem = new Image{Source = "Animal6.jpg"}
+                    ImageItem = new Image{Source = "wolf.jpg"}
                 },
                 new CollectionItems
                 {
                     NameItem = "КОЗЕЛ",
-                    ImageItem = new Image{Source = "Animal7.jpg"}
+                    ImageItem = new Image{Source = "goat.jpg"}
                 },
                 new CollectionItems
                 {
                     NameItem = "МЕДВЕДЬ",
-                    ImageItem = new Image{Source = "Animal8.jpg"}
+                    ImageItem = new Image{Source = "beer.jpg"}
                 },
                 new CollectionItems
                 {
                     NameItem = "ЛИСА",
-                    ImageItem = new Image{Source = "Animal9.jpg"}
+                    ImageItem = new Image{Source = "fox.jpg"}
                 },
                 new CollectionItems
                 {
                     NameItem = "КОШКА",
-                    ImageItem = new Image{Source = "Animal10.jpg"}
+                    ImageItem = new Image{Source = "cat.jpg"}
                 },
                 new CollectionItems
                 {
                     NameItem = "ЛЕВ",
-                    ImageItem = new Image{Source = "Animal11.jpg"}
+                    ImageItem = new Image{Source = "lion.jpg"}
                 },
             };
         }

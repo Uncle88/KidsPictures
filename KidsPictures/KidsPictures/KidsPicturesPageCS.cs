@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using Xamarin.Forms;
 
 namespace KidsPictures
@@ -31,12 +33,12 @@ namespace KidsPictures
 
                 var imageBox = new Image
                     {
-                        WidthRequest = 200,
-                        HeightRequest = 50,
+                        WidthRequest = 350,
+                        HeightRequest = 1000,
                         HorizontalOptions = LayoutOptions.Center,
                         VerticalOptions = LayoutOptions.CenterAndExpand
                     };
-                imageBox.SetBinding(Image.SourceProperty, "ImageItem");
+                imageBox.SetBinding(Image.SourceProperty,"ImageItem");
 
                     return new ContentPage
                     {
