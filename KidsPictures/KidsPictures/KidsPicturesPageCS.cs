@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Reflection;
 using Xamarin.Forms;
 
 namespace KidsPictures
@@ -21,6 +22,8 @@ namespace KidsPictures
                     break;
             }
 
+            CollectionItems cItems = new CollectionItems();
+
            var ItemTemplate = new DataTemplate(() =>
                 {
                     var nameLabel = new Label
@@ -31,24 +34,26 @@ namespace KidsPictures
                     };
                     nameLabel.SetBinding(Label.TextProperty, "NameItem");
 
-                var imageBox = new Image
-                    {
-                        WidthRequest = 350,
-                        HeightRequest = 1000,
-                        HorizontalOptions = LayoutOptions.Center,
-                        VerticalOptions = LayoutOptions.CenterAndExpand
-                    };
-                imageBox.SetBinding(Image.SourceProperty,"ImageItem");
+                    var imageBox = new Image
+                        {
+                            WidthRequest = 350,
+                            HeightRequest = 1000,
+                            HorizontalOptions = LayoutOptions.Center,
+                            VerticalOptions = LayoutOptions.CenterAndExpand
+                        };
+                imageBox.SetBinding(Image.SourceProperty, "ImageItem");
+                //imageBox.SetBinding(ImageSource.FromResource("ImageItem"));
 
                     return new ContentPage
                     {
                         Padding = padding,
                         Content = new StackLayout
                         {
-                            Children = {
+                            Children =
+                        {
                             nameLabel,
                             imageBox
-                            }
+                        }
                         }
                     };
                 });
